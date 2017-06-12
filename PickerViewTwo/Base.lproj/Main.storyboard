@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,36 +30,39 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="W5r-WY-5qi"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-td-08J">
-                                <rect key="frame" x="0.0" y="20" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.89740883400862825" green="1" blue="0.42013082474981589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-32-maj">
+                                <rect key="frame" x="16" y="30" width="343" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.87561399868451195" blue="0.91050116833756733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="MAe-Xu-Yem"/>
+                                    <constraint firstAttribute="height" constant="50" id="Zms-FC-xtI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xjl-03-nRb"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pww-32-maj" secondAttribute="trailing" id="0RT-dL-XgQ"/>
                             <constraint firstAttribute="trailing" secondItem="bRi-VY-93o" secondAttribute="trailing" id="Bwd-hw-yuY"/>
                             <constraint firstAttribute="width" secondItem="bRi-VY-93o" secondAttribute="width" id="COV-1o-m9X"/>
-                            <constraint firstAttribute="trailing" secondItem="UYy-td-08J" secondAttribute="trailing" id="DLw-Jy-1DW"/>
-                            <constraint firstItem="UYy-td-08J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DOG-Cx-G3g"/>
+                            <constraint firstItem="Pww-32-maj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KSe-nh-Zug"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bRi-VY-93o" secondAttribute="bottom" constant="56" id="Pau-wO-od0"/>
                             <constraint firstItem="bRi-VY-93o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c4h-yb-tvG"/>
-                            <constraint firstItem="UYy-td-08J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qit-m0-u4x"/>
+                            <constraint firstItem="Pww-32-maj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="lUg-rI-we1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="UYy-td-08J" id="Qrk-26-dNy"/>
                         <outlet property="pickerview" destination="bRi-VY-93o" id="sif-Xw-97A"/>
+                        <outlet property="textField" destination="Pww-32-maj" id="ExB-Dk-Og6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-684" y="81"/>
         </scene>
     </scenes>
 </document>

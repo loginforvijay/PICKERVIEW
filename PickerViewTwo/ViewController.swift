@@ -1,18 +1,14 @@
-//
-//  ViewController.swift
-//  PickerViewTwo
-//
-//  Created by Admin on 12/06/17.
-//  Copyright © 2017 Admin. All rights reserved.
-//
+
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource
+class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate
 
 {
+    @IBOutlet weak var textField: UITextField!
+    
 
-    @IBOutlet weak var label: UILabel!
+    
     
     @IBOutlet weak var pickerview: UIPickerView!
     
@@ -38,23 +34,40 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        label.text =  names[row]
+        textField.text =  names[row]
+        
+        self.pickerview.isHidden = true
     
     self.view.endEditing(false)
     }
     
     
+   public func textFieldDidBeginEditing(_ textField: UITextField)
+   {
     
-    override func viewDidLoad() {
+    if textField == self.textField
+    {
+        self.pickerview.isHidden = false
+        
+        
+        
+        
+        
+        // keyboard hiding
+        
+        textField.endEditing(true)
+    }
+    
+    
+    }
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
    
-    
-        
-        
-        
-    
-    
     }
 
     override func didReceiveMemoryWarning() {
